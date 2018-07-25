@@ -1,0 +1,189 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20180724.224141.81390.001.txt
+Dump event time:  2018/07/24 22:41:41
+Module load time: 2018/07/24 22:41:41
+Process ID: 81390
+Command line: node /Users/darwinrinderer/.npm-global/bin/composer archive list -a hyper-test.bna
+
+Node.js version: v8.11.3
+(http_parser: 2.8.0, v8: 6.2.414.54, uv: 1.19.1, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.32.0, napi: 3, openssl: 1.0.2o, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.11.3, 64 bit)
+
+OS version: Darwin 17.6.0 Darwin Kernel Version 17.6.0: Tue May  8 15:22:16 PDT 2018; root:xnu-4570.61.1~1/RELEASE_X86_64
+
+Machine: Darwins-MacBook-Pro.local x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/Users/darwinrinderer/.npm-global/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.get [as argv] (/Users/darwinrinderer/.npm-global/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.<anonymous> (/Users/darwinrinderer/.npm-global/lib/node_modules/composer-cli/cli.js:1:1)
+Module._compile (module.js:1:1)
+Object.Module._extensions..js (module.js:1:1)
+Module.load (module.js:1:1)
+tryModuleLoad (module.js:1:1)
+Function.Module._load (module.js:1:1)
+Function.Module.runMain (module.js:1:1)
+startup (bootstrap_node.js:1:1)
+bootstrap_node.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x1021ec397] nodereport::OnUncaughtException(v8::Isolate*) [/Users/darwinrinderer/.npm-global/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0x1005bdcb3] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [/usr/local/bin/node]
+ 2: [pc=0x100764e4b] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [/usr/local/bin/node]
+ 3: [pc=0x1f2fcbc842fd] 
+ 4: [pc=0x1f2fcbd87a7a] 
+ 5: [pc=0x1f2fcbd3d1d6] 
+ 6: [pc=0x1f2fcbc8535f] 
+ 7: [pc=0x1f2fcbd3d1d6] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 16,777,216 bytes, committed memory: 16,677,080 bytes
+    Capacity: 8,249,344 bytes, used: 6,609,296 bytes, available: 1,640,048 bytes
+Heap space name: old_space
+    Memory size: 17,625,088 bytes, committed memory: 16,024,832 bytes
+    Capacity: 15,962,296 bytes, used: 15,727,912 bytes, available: 234,384 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,392,448 bytes
+    Capacity: 1,326,912 bytes, used: 1,326,912 bytes, available: 0 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,252,912 bytes
+    Capacity: 1,537,160 bytes, used: 1,218,096 bytes, available: 319,064 bytes
+Heap space name: large_object_space
+    Memory size: 2,928,640 bytes, committed memory: 2,928,640 bytes
+    Capacity: 1,461,306,528 bytes, used: 2,872,992 bytes, available: 1,458,433,536 bytes
+
+Total heap memory size: 41,021,440 bytes
+Total heap committed memory: 38,275,912 bytes
+Total used heap memory: 27,755,208 bytes
+Total available heap memory: 1,460,627,032 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 0.610042 secs
+  Kernel mode CPU: 0.077275 secs
+  Average CPU Consumption : 68.7317%
+  Maximum resident set size: 66,337,112,064 bytes
+  Page faults: 3 (I/O required) 16242 (no I/O required)
+  Filesystem activity: 0 reads 0 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x0000000102600480  
+[-A]   check     0x00007ffeefbfeb00  
+[RA]   idle      0x00007ffeefbfeb78  
+[--]   prepare   0x00007ffeefbfebf0  
+[--]   check     0x00007ffeefbfec68  
+[-A]   async     0x000000010154da40  
+[R-]   timer     0x0000000102319710  repeat: 0, timeout expired: 769440950 ms ago
+[R-]   tty       0x0000000102319868  width: 97, height: 21, file descriptor: 10, write queue size: 0, writable
+[-A]   signal    0x0000000102204f70  signum: 28 (SIGWINCH)
+[R-]   tty       0x0000000102205b18  width: 97, height: 21, file descriptor: 12, write queue size: 0, writable
+[-A]   async     0x00000001021f3f78  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  NVM_RC_VERSION=
+  TERM_PROGRAM=Apple_Terminal
+  NVM_CD_FLAGS=
+  SHELL=/bin/bash
+  TERM=xterm-256color
+  TMPDIR=/var/folders/v3/j1vgxspj1nn9grhdfp344gdm0000gn/T/
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.kBOv0HxkO9/Render
+  TERM_PROGRAM_VERSION=404
+  TERM_SESSION_ID=191AD1C6-27C3-4BA2-872E-93BE90A728E2
+  NVM_DIR=/Users/darwinrinderer/.nvm
+  USER=darwinrinderer
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.wqVpoIIEWn/Listeners
+  PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/darwinrinderer/.npm-global/bin
+  PWD=/Users/darwinrinderer/Desktop/GW Coding Bootcamp/Homework/HW #15/hyperledger-angular-dbank/hyper-bank
+  LANG=en_US.UTF-8
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  SHLVL=1
+  HOME=/Users/darwinrinderer
+  LOGNAME=darwinrinderer
+  _=/Users/darwinrinderer/.npm-global/bin/composer
+  OLDPWD=/Users/darwinrinderer/Desktop/GW Coding Bootcamp/Homework/HW #15/hyperledger-angular-dbank
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)             unlimited       unlimited
+  max memory size (kbytes)              unlimited       unlimited
+  open files                                24576       unlimited
+  stack size (bytes)                      8388608        67104768
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                         1418            2128
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /usr/local/bin/node
+  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+  /usr/lib/libSystem.B.dylib
+  /usr/lib/libc++.1.dylib
+  /usr/lib/libDiagnosticMessagesClient.dylib
+  /usr/lib/libicucore.A.dylib
+  /usr/lib/libobjc.A.dylib
+  /usr/lib/libz.1.dylib
+  /usr/lib/system/libcache.dylib
+  /usr/lib/system/libcommonCrypto.dylib
+  /usr/lib/system/libcompiler_rt.dylib
+  /usr/lib/system/libcopyfile.dylib
+  /usr/lib/system/libcorecrypto.dylib
+  /usr/lib/system/libdispatch.dylib
+  /usr/lib/system/libdyld.dylib
+  /usr/lib/system/libkeymgr.dylib
+  /usr/lib/system/liblaunch.dylib
+  /usr/lib/system/libmacho.dylib
+  /usr/lib/system/libquarantine.dylib
+  /usr/lib/system/libremovefile.dylib
+  /usr/lib/system/libsystem_asl.dylib
+  /usr/lib/system/libsystem_blocks.dylib
+  /usr/lib/system/libsystem_c.dylib
+  /usr/lib/system/libsystem_configuration.dylib
+  /usr/lib/system/libsystem_coreservices.dylib
+  /usr/lib/system/libsystem_darwin.dylib
+  /usr/lib/system/libsystem_dnssd.dylib
+  /usr/lib/system/libsystem_info.dylib
+  /usr/lib/system/libsystem_m.dylib
+  /usr/lib/system/libsystem_malloc.dylib
+  /usr/lib/system/libsystem_network.dylib
+  /usr/lib/system/libsystem_networkextension.dylib
+  /usr/lib/system/libsystem_notify.dylib
+  /usr/lib/system/libsystem_sandbox.dylib
+  /usr/lib/system/libsystem_secinit.dylib
+  /usr/lib/system/libsystem_kernel.dylib
+  /usr/lib/system/libsystem_platform.dylib
+  /usr/lib/system/libsystem_pthread.dylib
+  /usr/lib/system/libsystem_symptoms.dylib
+  /usr/lib/system/libsystem_trace.dylib
+  /usr/lib/system/libunwind.dylib
+  /usr/lib/system/libxpc.dylib
+  /usr/lib/closure/libclosured.dylib
+  /usr/lib/libc++abi.dylib
+  /Users/darwinrinderer/.npm-global/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================
